@@ -1,6 +1,6 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
 
 android {
     compileSdkVersion 28
@@ -19,7 +19,6 @@ android {
         }
     }
 }
-
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

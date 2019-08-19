@@ -1,6 +1,7 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "com.novoda.bintray-release"
 
 android {
     compileSdkVersion 28
@@ -9,7 +10,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName versionName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -34,4 +35,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+publish {
+    userOrg = "worker8"
+    repoName = "Worker8Util"
+    groupId = "com.github.worker8utilslib"
+    artifactId = "Worker8UtilsLib"
+    publishVersion = versionName
+    desc = "A Kotlin library which makes Android development smoother"
+    website = "https://github.com/worker8/worker8utils"
 }
